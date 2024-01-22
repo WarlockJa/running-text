@@ -15,6 +15,10 @@ export default function RunningText({
   const [iterations, setIterations] = useState<number>(0);
 
   useEffect(() => {
+    setHoverFlag(true);
+  }, [text, lng]);
+
+  useEffect(() => {
     if (!hoverFlag) return;
 
     const timeout = setTimeout(() => {

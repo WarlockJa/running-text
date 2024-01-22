@@ -1,0 +1,20 @@
+form {
+  position: absolute;
+  bottom: 1%;
+  left: calc(50vw - 6em);
+
+  label {
+    font-size: 1.2rem;
+  }
+  .inputBlock {
+    display: flex;
+    input,
+    button {
+      padding: 0.45em;
+    }
+    input {
+      width: 100%;
+      max-width: 20em;
+    }
+  }
+}
