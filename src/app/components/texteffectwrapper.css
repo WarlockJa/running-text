@@ -1,20 +1,33 @@
 form {
   position: absolute;
   bottom: 1%;
-  left: calc(50vw - 6em);
+  /* left: calc(50vw - 6em); */
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 
-  label {
-    font-size: 1.2rem;
-  }
-  .inputBlock {
-    display: flex;
-    input,
-    button {
-      padding: 0.45em;
+  .formWrapper {
+    label {
+      font-size: 1.2rem;
+      padding: 0.3em;
     }
-    input {
-      width: 100%;
-      max-width: 20em;
+    .inputBlock {
+      display: flex;
+      input,
+      button {
+        padding: 0.45em;
+      }
+      input {
+        border-radius: 1em 0 0 1em;
+        width: 100%;
+        max-width: 20em;
+      }
+      button {
+        border-left: none;
+        border-radius: 0 1em 1em 0;
+      }
     }
   }
 }

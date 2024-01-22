@@ -33,19 +33,23 @@ export default function TextEffectWrapper() {
     <div>
       <RunningText lng="EN" text={data.currentText} />
       <form onSubmit={(e) => handleSubmit(e)}>
-        <label htmlFor="formInput">
-          {data.invalidText ? "only Latin letters accepted" : "enter new text"}
-        </label>
-        <div className="inputBlock">
-          <input
-            id="formInput"
-            required
-            type="text"
-            name="newtext"
-            value={data.inputText}
-            onChange={(e) => setData({ ...data, inputText: e.target.value })}
-          />
-          <button type="submit">OK</button>
+        <div className="formWrapper">
+          <label htmlFor="formInput">
+            {data.invalidText
+              ? "only Latin letters accepted"
+              : "enter new text"}
+          </label>
+          <div className="inputBlock">
+            <input
+              id="formInput"
+              required
+              type="text"
+              name="newtext"
+              value={data.inputText}
+              onChange={(e) => setData({ ...data, inputText: e.target.value })}
+            />
+            <button type="submit">OK</button>
+          </div>
         </div>
       </form>
     </div>
